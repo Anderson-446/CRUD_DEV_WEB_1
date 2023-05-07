@@ -14,6 +14,7 @@ while(($row = fgetcsv($fp)) !== false) {
 
 $fp = fopen('sneakers.csv','r');
 ?>
+<?php require("header.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

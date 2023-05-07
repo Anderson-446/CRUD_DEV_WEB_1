@@ -23,6 +23,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== true ) {
         exit();
     }
 ?>
+<?php require("header.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +70,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== true ) {
         width: 100%;
         border-radius:10px;
         color:white;
-        font-size:15px;
+        font-size:22px;
         cursor:pointer;
     }
     button:hover{
