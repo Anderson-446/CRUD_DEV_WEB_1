@@ -103,7 +103,7 @@ $fp = fopen('sneakers.csv','r');
                 <td><?= $row[3] ?></td>
                 <td><?= $row[4] ?></td>
                 <td>
-                    <form action="delete.php" method=GET>
+                    <form action="delete.php" method=GET onsubmit="return confirm('Você está certo disso?')">
                         <input type="hidden" name="id" value ="<?= $row[0]?>">
                         <button>Remover</button>
                     </form>
