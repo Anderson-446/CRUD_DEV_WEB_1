@@ -36,7 +36,7 @@
         background-color: #111;
         border:none;
         padding:15px;
-        width: 70%;
+        width: 100%;
         border-radius:10px;
         color:white;
         font-size:15px;

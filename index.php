@@ -39,7 +39,7 @@ session_start();
             background-color: #111;
             border:none;
             padding:15px;
-            width: 70%;
+            width: 100%;
             border-radius:10px;
             color:white;
             font-size:15px;
@@ -49,7 +49,7 @@ session_start();
             box-shadow:inset -4px 4px 0 #222;
         }
         .botao {
-            width:50%;
+            width:100%;
         }
     </style>
 
