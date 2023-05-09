@@ -8,11 +8,11 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== true ) {
 }
 $id = uniqid();
 
-$fp = fopen('sneakers.csv','r');
+$fp = fopen('carros.csv','r');
 while(($row = fgetcsv($fp)) !== false) {
 }
 
-$fp = fopen('sneakers.csv','r');
+$fp = fopen('carros.csv','r');
 ?>
 <?php require("header.php") ?>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $fp = fopen('sneakers.csv','r');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arsenal de Sneakers</title>
+    <title>Garagem</title>
 </head>
 <style>
     body {
@@ -83,18 +83,18 @@ $fp = fopen('sneakers.csv','r');
 </style>
 <body>
     <div>
-    <h1>Arsenal de Sneakers:</h1>
+    <h1>Garagem:</h1>
     <table class="table">
         <tr>
-            <th>ID</th>
-            <th>Nome</th>
+            <th>Placa</th>
+            <th>Modelo</th>
             <th>Marca</th>
             <th>Cor</th>
-            <th>Tamanho</th>
-            <th>Excluir</th>
-            <th>Editar</th>
+            <th>Ano de Fabricação</th>
+            <th>Sair</th>
+            <th>Modificar</th>
         </tr>
-        <?php $fp = fopen('sneakers.csv', 'r') ?>
+        <?php $fp = fopen('carros.csv', 'r') ?>
         <?php while (($row = fgetcsv($fp)) !== false): ?>
             <tr>
                 <td><?= $row[0] ?></td>
@@ -105,23 +105,23 @@ $fp = fopen('sneakers.csv','r');
                 <td>
                     <form action="delete.php" method=GET onsubmit="return confirm('Você está certo disso?')">
                         <input type="hidden" name="id" value ="<?= $row[0]?>">
-                        <button>Remover</button>
+                        <button class='btn btn-success'>Sair</button>
                     </form>
                 </td>
                <td>
-                <a href="edit.php?id=<?= $row[0] ?>"> <button>Editar</button></a>
+                <a href="edit.php?id=<?= $row[0] ?>"> <button>Modificar</button></a>
                </td>
             </tr>
             <?php endwhile ?>
     </table>
-    <form action="create.php" method="POST">
+    <form action="adicionarCarro.php" method="POST">
         <input type="hidden" name="id" value="<?= $id;?>">
-        <input type="text" name= "nome" placeholder="Nome" required>
+        <input type="text" name= "modelo" placeholder="modelo" required>
         <input type="text" name="marca" placeholder="Marca" required>
         <input type="text" name = "cor" placeholder="Cor" required>
-        <input type="number" name = "tamanho" placeholder ="Tamanho" required>
+        <input type="number" name = "ano" placeholder ="Ano de Fabricação" required min="1000" max="2024" maxlength="4">
         <br><br>
-        <button class="salvar">Salvar</button>
+        <button class="salvar">Entrar</button>
 
     </form>
     </div>

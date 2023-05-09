@@ -1,12 +1,12 @@
 <?php
 
 $id = $_POST['id'];
-$nome = $_POST['nome'];
+$modelo = $_POST['modelo'];
 $marca = $_POST['marca'];
 $cor = $_POST['cor'];
-$tamanho = $_POST['tamanho'];
+$ano = $_POST['ano'];
 
-$fp = fopen('sneakers.csv','r');
+$fp = fopen('carros.csv','r');
 while (($row = fgetcsv($fp)) !== false) {
     if ($row[0] == $id) {
         http_response_code(400); // bad request
@@ -15,8 +15,8 @@ while (($row = fgetcsv($fp)) !== false) {
     }
 }
 
-$fp = fopen('sneakers.csv', 'a');
-fputcsv($fp,[$id,$nome,$marca,$cor,$tamanho]);
+$fp = fopen('carros.csv', 'a');
+fputcsv($fp,[$id,$modelo,$marca,$cor,$ano]);
 
 http_response_code(302);
 header('location:index.php');

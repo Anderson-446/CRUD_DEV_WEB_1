@@ -6,7 +6,7 @@ $tempFile = tempnam('.',''); //arquivo temporário
 //recebe o conteúdo original(tirando a linha que iremos excluir)
 
 $fpTemp = fopen($tempFile,'w');
-$originFile = fopen('sneakers.csv','r');
+$originFile = fopen('carros.csv','r');
 
 while(($row = fgetcsv($originFile)) !== false) {
     if($row[0] != $id) {
@@ -17,7 +17,7 @@ while(($row = fgetcsv($originFile)) !== false) {
 fclose($fpTemp);
 fclose($originFile);
 
-rename($tempFile, 'sneakers.csv');
+rename($tempFile, 'carros.csv');
 
 header('location: index.php');
 

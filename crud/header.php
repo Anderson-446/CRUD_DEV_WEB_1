@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokePlatinum</title>
+    <title>Sua Garagem</title>
     <style>
         nav ul {
             display: flex;
@@ -27,7 +27,7 @@
         <ul>
             <li><a href="/"><button>Home</button></a>
             </li>
-            <li><a href="../crud/index.php"> <button>Arsenal</button></a>
+            <li><a href="../crud/index.php"> <button>Garagem</button></a>
         </li>
         </ul>
     </nav>

@@ -9,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arsenal de Sneakers</title>
+    <title>Garagem</title>
 
     <style>
         body {
@@ -56,7 +56,7 @@ session_start();
 </head>
 <body>
     <div class="login">
-    <h1>Acesse o Arsenal de Sneakers</h1>
+    <h1>Sua Garagem</h1>
     <?php if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true): ?>
         <!-- usuário não está logado(não existe SESSION['auth'] ou SESSION['auth'] não é true) -->
     <form action="auth.php" method="POST">
@@ -71,7 +71,7 @@ session_start();
     </div>
     <?php else: ?>
         <h2>Tá tudo liberado!</h2>
-        <a href="crud/"><button>Acesse o Estoque</button></a>
+        <a href="crud/"><button>Acesse</button></a>
         <br><br>
         <a href="logout.php"> <button>Sair</button></a>
     <?php endif ?>        
