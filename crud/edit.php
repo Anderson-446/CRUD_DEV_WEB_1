@@ -8,7 +8,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== true ) {
 }
 
     $id = $_GET['id'];
-    $fp = fopen('sneakers.csv','r');
+    $fp = fopen('carros.csv','r');
     $data = [];
 
     while(($row = fgetcsv($fp)) !== false) {
@@ -79,17 +79,17 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== true ) {
 </style>
 <body>
     <div>
-        <h1 class="separa">Sneaker ID: <?=$id?></h1>
+        <h1 class="separa">Car ID: <?=$id?></h1>
         <form action="update.php" method="POST">
             <input type="hidden" name="id" value="<?=$data[0]?>">
 
-            <input type="text" name="nome" placeholder="Nome" value="<?=$data[1]?>">
+            <input type="text" name="modelo" placeholder="Modelo" value="<?=$data[1]?>">
             <br><br>
             <input type="text" name="marca" placeholder="Marca" value="<?=$data[2]?>">
             <br><br>
             <input type="text" name="cor" placeholder="Cor" value="<?=$data[3]?>">
             <br><br>
-            <input type="number" name="tamanho" placeholder="Tamanho" value="<?=$data[4]?>">
+            <input type="number" name="ano" placeholder="Ano de Fabricação" value="<?=$data[4]?>">
             <br><br>
             <button>Editar</button>
             <br><br>

@@ -27,7 +27,7 @@
         <ul>
             <li><a href="/"><button>Home</button></a>
             </li>
-            <li><a href="../crud/index.php"> <button>Arsenal</button></a>
+            <li><a href="../crud/index.php"> <button>Garagem</button></a>
         </li>
         </ul>
     </nav>
