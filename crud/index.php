@@ -114,7 +114,7 @@ $fp = fopen('carros.csv','r');
             </tr>
             <?php endwhile ?>
     </table>
-    <form action="create.php" method="POST">
+    <form action="adicionarCarro.php" method="POST">
         <input type="hidden" name="id" value="<?= $id;?>">
         <input type="text" name= "modelo" placeholder="modelo" required>
         <input type="text" name="marca" placeholder="Marca" required>

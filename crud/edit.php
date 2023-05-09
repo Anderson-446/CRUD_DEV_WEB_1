@@ -79,17 +79,16 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== true ) {
 </style>
 <body>
     <div>
-        <h1 class="separa">Car ID: <?=$id?></h1>
+        <h1 class="separa">Placa do Carro: <?=$id?></h1>
         <form action="update.php" method="POST">
             <input type="hidden" name="id" value="<?=$data[0]?>">
-
             <input type="text" name="modelo" placeholder="Modelo" value="<?=$data[1]?>">
             <br><br>
             <input type="text" name="marca" placeholder="Marca" value="<?=$data[2]?>">
             <br><br>
             <input type="text" name="cor" placeholder="Cor" value="<?=$data[3]?>">
             <br><br>
-            <input type="number" name="ano" placeholder="Ano de Fabricação" value="<?=$data[4]?>">
+            <input type="number" name="ano" placeholder="Ano de Fabricação" required min="1000" max="2024" maxlength="4" value="<?=$data[4]?>">
             <br><br>
             <button>Modificar</button>
             <br><br>
