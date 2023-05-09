@@ -14,10 +14,11 @@
         nav ul li {
             list-style: none;
             border: 1px solid;
-            padding: 1em;
+            padding: 0.5em;
+            border-radius: 10px;
         }
         nav ul li:hover {
-            background-color: hsl(200, 0%, 80%);
+            box-shadow:inset -4px 4px 0 #222;
         }
         
     </style>
