@@ -105,7 +105,7 @@ $fp = fopen('carros.csv','r');
                 <td>
                     <form action="delete.php" method=GET onsubmit="return confirm('Você está certo disso?')">
                         <input type="hidden" name="id" value ="<?= $row[0]?>">
-                        <button>Sair</button>
+                        <button class='btn btn-success'>Sair</button>
                     </form>
                 </td>
                <td>

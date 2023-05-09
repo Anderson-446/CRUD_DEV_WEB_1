@@ -91,7 +91,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== true ) {
             <br><br>
             <input type="number" name="ano" placeholder="Ano de Fabricação" value="<?=$data[4]?>">
             <br><br>
-            <button>Editar</button>
+            <button>Modificar</button>
             <br><br>
         </form>
     </div>
